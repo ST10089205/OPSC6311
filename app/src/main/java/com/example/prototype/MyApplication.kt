@@ -7,7 +7,9 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import java.util.*
+import java.util.Calendar
+import java.util.Locale
+
 
 class MyApplication: Application() {
 
@@ -22,8 +24,14 @@ class MyApplication: Application() {
 
             return DateFormat.format("dd/mm/yyy", cal).toString()
         }
-        //add photo size video 6 timestamp-33:30
-        //Load thumbnail using photo timestamp - 33:53
+
+        fun loadCategory(categoryId: String, categoryTv: TextView) {
+
+        }
+
+
+    }
+
 
         fun loadCategory(Id: String, categoryTv: TextView) {
             val ref = FirebaseDatabase.getInstance().getReference("Categories")
@@ -43,4 +51,5 @@ class MyApplication: Application() {
 
         }
     }
-}
+
+
